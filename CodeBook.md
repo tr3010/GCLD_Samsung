@@ -47,8 +47,6 @@ These signals were used to estimate variables of the feature vector for each pat
 
 The data set has been stored in the `UCI HAR Dataset/` directory.
 
-The CDN url provided by the instructor is used instead of the original location, to offload the traffic to the UCI server.
-
 The `unzip` function is used to extract the zip file in this directory.
 
 ```
@@ -117,10 +115,10 @@ A warning is returned for the `Activity` column because it's not numeric. This d
 
 #### Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Finaly the desired result, a `tidy` data table is created with the average of each measurement per activity/subject combination. The new dataset is saved in `tidy.csv` file.
+Finaly the desired result, a `tidy` data table is created with the average of each measurement per activity/subject combination. The new dataset is saved in `tidy_dataset.csv` file.
 
 ```
 DT <- data.table(bigData)
 tidy<-DT[,lapply(.SD,mean),by="Activity,Subject"]
-write.table(tidy,file="tidy.csv",sep=",",col.names = NA)
+write.table(tidy,file="tidy_dataset.csv",sep=",",col.names = NA)
 ```
