@@ -1,6 +1,6 @@
 ### Introduction
 
-This file describes the data, the variables, and the work that has been performed to clean up the data.
+This file describes the data and variables of this study.
 
 ### Data Set Description
 
